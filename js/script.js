@@ -32,6 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Mobile Services Dropdown Toggle
+  const mobileServicesToggle = document.querySelector('.mobile-services-toggle');
+  const mobileServicesContent = document.querySelector('.mobile-services-content');
+  const mobileServicesArrow = document.querySelector('.mobile-services-arrow');
+
+  if (mobileServicesToggle && mobileServicesContent) {
+    mobileServicesToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      mobileServicesContent.classList.toggle('hidden');
+      mobileServicesArrow.style.transform = mobileServicesContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  }
+
   // Header scroll effect
   const header = document.querySelector('header');
   let lastScroll = 0;
