@@ -1,0 +1,402 @@
+/* Rockback Media - Custom Styles */
+/* Complements Tailwind CSS */
+
+:root {
+  /* Pastels */
+  --pastel-mint: #A7F3D0;
+  --pastel-sky: #C3E8FF;
+  --pastel-lavender: #E9D5FF;
+  --pastel-peach: #FED7AA;
+
+  /* Neons */
+  --neon-green: #00FF9D;
+  --neon-cyan: #00D9FF;
+  --neon-magenta: #FF00FF;
+
+  /* Base */
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #777777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header - Fixed on scroll */
+header {
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 255, 157, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation */
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Service Cards */
+.service-card {
+  background-color: var(--black);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+  transform: translateY(-5px);
+}
+
+.service-card:nth-child(2):hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+}
+
+.service-card:nth-child(3):hover {
+  border-color: var(--neon-magenta);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+.service-card:nth-child(4):hover {
+  border-color: var(--pastel-mint);
+  box-shadow: 0 0 30px rgba(167, 243, 208, 0.3);
+}
+
+.service-card:nth-child(5):hover {
+  border-color: var(--pastel-sky);
+  box-shadow: 0 0 30px rgba(195, 232, 255, 0.3);
+}
+
+.service-card:nth-child(6):hover {
+  border-color: var(--pastel-lavender);
+  box-shadow: 0 0 30px rgba(233, 213, 255, 0.3);
+}
+
+.service-card:nth-child(7):hover {
+  border-color: var(--pastel-peach);
+  box-shadow: 0 0 30px rgba(254, 215, 170, 0.3);
+}
+
+/* Project Cards */
+.project-card {
+  background-color: var(--black);
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+  color: var(--black);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--neon-cyan);
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background-color: var(--neon-cyan);
+  color: var(--black);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: var(--black);
+  border: 2px solid #333;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+/* Hero backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, #1a0033 0%, #000000 50%, #001a33 100%);
+  position: relative;
+}
+
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Quote section */
+.quote-bg {
+  background: linear-gradient(135deg, #0a0014 0%, #000000 50%, #00141a 100%);
+  position: relative;
+}
+
+.quote-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(ellipse at 50% 50%, rgba(167, 243, 208, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Client logos */
+.client-logo {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Stats cards */
+.stat-card {
+  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Process steps */
+.process-step {
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  border: 2px solid #1a1a1a;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.process-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Checkmarks */
+.check-icon {
+  color: var(--neon-green);
+  margin-right: 0.75rem;
+}
+
+/* Footer */
+footer a {
+  color: var(--gray);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--neon-cyan);
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan), var(--neon-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neon-text {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Loading animation for images */
+.loading-image {
+  background: linear-gradient(90deg, #0a0a0a 25%, #1a1a1a 50%, #0a0a0a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility - Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--neon-cyan);
+  color: var(--black);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus indicators */
+*:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
