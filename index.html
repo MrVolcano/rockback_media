@@ -36,6 +36,18 @@
       <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
         <a href="index.html" class="text-white hover:text-[#00FF9D]">Home</a>
         <a href="about.html" class="text-white hover:text-[#00FF9D]">About</a>
+        <div class="services-dropdown">
+          <a href="#" class="text-white hover:text-[#00FF9D]">Services ▾</a>
+          <div class="services-dropdown-content">
+            <a href="services/web-design.html" class="service-web-design">Web Design</a>
+            <a href="services/branding.html" class="service-branding">Branding</a>
+            <a href="services/video-production.html" class="service-video">Video Production</a>
+            <a href="services/social-media.html" class="service-social">Social Media</a>
+            <a href="services/drone-filming.html" class="service-drone">Drone Filming</a>
+            <a href="services/music-sound.html" class="service-music">Music & Sound</a>
+            <a href="services/ai-automation.html" class="service-ai">AI Automation</a>
+          </div>
+        </div>
         <a href="portfolio.html" class="text-white hover:text-[#00FF9D]">Portfolio</a>
         <a href="projects/index.html" class="text-white hover:text-[#00FF9D]">Projects</a>
         <a href="blog.html" class="text-white hover:text-[#00FF9D]">Blog</a>
@@ -55,6 +67,21 @@
       <nav class="flex flex-col space-y-6" aria-label="Mobile navigation">
         <a href="index.html" class="text-white text-2xl hover:text-[#00FF9D]">Home</a>
         <a href="about.html" class="text-white text-2xl hover:text-[#00FF9D]">About</a>
+        <div class="mobile-services-dropdown">
+          <button class="mobile-services-toggle text-white text-2xl hover:text-[#00FF9D] w-full text-left flex justify-between items-center">
+            Services
+            <span class="mobile-services-arrow">▾</span>
+          </button>
+          <div class="mobile-services-content hidden pl-4 mt-3 space-y-3">
+            <a href="services/web-design.html" class="block text-lg service-color-web-design hover:underline">Web Design</a>
+            <a href="services/branding.html" class="block text-lg service-color-branding hover:underline">Branding</a>
+            <a href="services/video-production.html" class="block text-lg service-color-video hover:underline">Video Production</a>
+            <a href="services/social-media.html" class="block text-lg service-color-social hover:underline">Social Media</a>
+            <a href="services/drone-filming.html" class="block text-lg service-color-drone hover:underline">Drone Filming</a>
+            <a href="services/music-sound.html" class="block text-lg service-color-music hover:underline">Music & Sound</a>
+            <a href="services/ai-automation.html" class="block text-lg service-color-ai hover:underline">AI Automation</a>
+          </div>
+        </div>
         <a href="portfolio.html" class="text-white text-2xl hover:text-[#00FF9D]">Portfolio</a>
         <a href="projects/index.html" class="text-white text-2xl hover:text-[#00FF9D]">Projects</a>
         <a href="blog.html" class="text-white text-2xl hover:text-[#00FF9D]">Blog</a>
@@ -194,30 +221,118 @@
       </div>
     </section>
 
+    <!-- Featured Portfolio -->
+    <section class="py-24 px-6 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Work</h2>
+          <p class="text-xl" style="color: #777777;">A glimpse into our creative excellence</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+          <!-- Portfolio Item 1 - Web Design -->
+          <div class="portfolio-item fade-in" data-category="web-design">
+            <a href="portfolio.html" class="portfolio-card service-web-design">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="TechNova Solutions website" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">TechNova Solutions</h3>
+                <p class="text-lg mb-2 service-color-web-design">Web Design & Development</p>
+                <p class="text-base" style="color: #CCCCCC;">Modern B2B SaaS website with 300% increase in leads</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Portfolio Item 2 - Branding -->
+          <div class="portfolio-item fade-in" data-category="branding">
+            <a href="portfolio.html" class="portfolio-card service-branding">
+              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80" alt="GreenLeaf Organics branding" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">GreenLeaf Organics</h3>
+                <p class="text-lg mb-2 service-color-branding">Brand Identity & Packaging</p>
+                <p class="text-base" style="color: #CCCCCC;">Complete organic brand with 450% sales increase</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Portfolio Item 3 - Video Production -->
+          <div class="portfolio-item fade-in" data-category="video">
+            <a href="portfolio.html" class="portfolio-card service-video">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80" alt="Summit Realty video" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Summit Realty Group</h3>
+                <p class="text-lg mb-2 service-color-video">Cinematic Property Tours</p>
+                <p class="text-base" style="color: #CCCCCC;">High-end real estate videos with 4K drone footage</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Portfolio Item 4 - Social Media -->
+          <div class="portfolio-item fade-in" data-category="social-media">
+            <a href="portfolio.html" class="portfolio-card service-social">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" alt="Velocity Fitness social" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Velocity Fitness</h3>
+                <p class="text-lg mb-2 service-color-social">Social Media Campaign</p>
+                <p class="text-base" style="color: #CCCCCC;">Growing from 2K to 45K followers in 8 months</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="text-center fade-in">
+          <a href="portfolio.html" class="btn-secondary">View Full Portfolio</a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Client Icons Section -->
     <section class="py-24 px-6 bg-black">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">Trusted By</h2>
 
         <div class="client-slider flex overflow-x-auto gap-12 pb-6 cursor-grab select-none" style="scrollbar-width: none; -ms-overflow-style: none;">
-          <!-- Client placeholders -->
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">TechNova</span>
+          <!-- Client logos -->
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="140" height="50" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="15" width="20" height="20" fill="#00FF9D" rx="4"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">TechNova</text>
+            </svg>
           </div>
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">GreenLeaf Co</span>
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="25" r="10" fill="#A7F3D0"/>
+              <path d="M 20 15 L 25 22 L 20 35 L 15 22 Z" fill="#059669"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">GreenLeaf</text>
+            </svg>
           </div>
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">Summit Realty</span>
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="15,35 20,15 25,35" fill="#C3E8FF"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">Summit</text>
+            </svg>
           </div>
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">Velocity Fitness</span>
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 15 30 Q 20 20 25 30" stroke="#FED7AA" stroke-width="4" fill="none"/>
+              <circle cx="20" cy="22" r="3" fill="#FB923C"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">Velocity</text>
+            </svg>
           </div>
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">BlueWave Media</span>
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 15 18 Q 20 22 20 28 Q 20 22 25 18" stroke="#00D9FF" stroke-width="3" fill="none"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">BlueWave</text>
+            </svg>
           </div>
-          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex items-center justify-center" style="height: 120px;">
-            <span class="text-black text-xl font-bold">Artisan Brew</span>
+          <div class="client-logo flex-shrink-0 bg-white rounded-lg p-8 min-w-[200px] flex flex-col items-center justify-center" style="height: 120px;">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20" cy="25" rx="12" ry="8" fill="#D4A574"/>
+              <ellipse cx="20" cy="20" rx="8" ry="5" fill="#8B6F47"/>
+              <text x="38" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#000">Artisan Brew</text>
+            </svg>
           </div>
         </div>
       </div>

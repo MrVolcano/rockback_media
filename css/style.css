@@ -17,6 +17,15 @@
   --white: #FFFFFF;
   --black: #000000;
   --gray: #777777;
+
+  /* Service Colors */
+  --service-web-design: #00FF9D;
+  --service-branding: #C3E8FF;
+  --service-video: #E9D5FF;
+  --service-social: #FED7AA;
+  --service-drone: #A7F3D0;
+  --service-music: #00D9FF;
+  --service-ai: #FF00FF;
 }
 
 * {
@@ -632,4 +641,126 @@ img {
   .portfolio-overlay p {
     font-size: 0.875rem;
   }
+}
+
+/* Service Color Classes */
+.service-color-web-design { color: var(--service-web-design) !important; }
+.service-color-branding { color: var(--service-branding) !important; }
+.service-color-video { color: var(--service-video) !important; }
+.service-color-social { color: var(--service-social) !important; }
+.service-color-drone { color: var(--service-drone) !important; }
+.service-color-music { color: var(--service-music) !important; }
+.service-color-ai { color: var(--service-ai) !important; }
+
+/* Service Card Hover Colors */
+.service-web-design:hover { border-color: var(--service-web-design) !important; box-shadow: 0 0 40px rgba(0, 255, 157, 0.3) !important; }
+.service-branding:hover { border-color: var(--service-branding) !important; box-shadow: 0 0 40px rgba(195, 232, 255, 0.3) !important; }
+.service-video:hover { border-color: var(--service-video) !important; box-shadow: 0 0 40px rgba(233, 213, 255, 0.3) !important; }
+.service-social:hover { border-color: var(--service-social) !important; box-shadow: 0 0 40px rgba(254, 215, 170, 0.3) !important; }
+.service-drone:hover { border-color: var(--service-drone) !important; box-shadow: 0 0 40px rgba(167, 243, 208, 0.3) !important; }
+.service-music:hover { border-color: var(--service-music) !important; box-shadow: 0 0 40px rgba(0, 217, 255, 0.3) !important; }
+.service-ai:hover { border-color: var(--service-ai) !important; box-shadow: 0 0 40px rgba(255, 0, 255, 0.3) !important; }
+
+/* Portfolio Filter Button Colors */
+.filter-web-design { border-color: var(--service-web-design); color: var(--service-web-design); }
+.filter-web-design.active { background-color: var(--service-web-design); color: var(--black); }
+.filter-web-design:hover:not(.active) { border-color: var(--service-web-design); color: var(--service-web-design); }
+
+.filter-branding { border-color: var(--service-branding); color: var(--service-branding); }
+.filter-branding.active { background-color: var(--service-branding); color: var(--black); }
+.filter-branding:hover:not(.active) { border-color: var(--service-branding); color: var(--service-branding); }
+
+.filter-video { border-color: var(--service-video); color: var(--service-video); }
+.filter-video.active { background-color: var(--service-video); color: var(--black); }
+.filter-video:hover:not(.active) { border-color: var(--service-video); color: var(--service-video); }
+
+.filter-social { border-color: var(--service-social); color: var(--service-social); }
+.filter-social.active { background-color: var(--service-social); color: var(--black); }
+.filter-social:hover:not(.active) { border-color: var(--service-social); color: var(--service-social); }
+
+/* Services Dropdown */
+.services-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.services-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background-color: rgba(0, 0, 0, 0.98);
+  border: 2px solid #333;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  z-index: 1000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.services-dropdown:hover .services-dropdown-content {
+  display: block;
+}
+
+.services-dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.services-dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.services-dropdown-content a.service-web-design:hover {
+  border-left-color: var(--service-web-design);
+  color: var(--service-web-design);
+}
+
+.services-dropdown-content a.service-branding:hover {
+  border-left-color: var(--service-branding);
+  color: var(--service-branding);
+}
+
+.services-dropdown-content a.service-video:hover {
+  border-left-color: var(--service-video);
+  color: var(--service-video);
+}
+
+.services-dropdown-content a.service-social:hover {
+  border-left-color: var(--service-social);
+  color: var(--service-social);
+}
+
+.services-dropdown-content a.service-drone:hover {
+  border-left-color: var(--service-drone);
+  color: var(--service-drone);
+}
+
+.services-dropdown-content a.service-music:hover {
+  border-left-color: var(--service-music);
+  color: var(--service-music);
+}
+
+.services-dropdown-content a.service-ai:hover {
+  border-left-color: var(--service-ai);
+  color: var(--service-ai);
+}
+
+/* Mobile Services Menu */
+.mobile-services-menu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 2px solid #333;
+}
+
+.mobile-services-menu a {
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
 }
