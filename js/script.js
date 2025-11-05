@@ -251,3 +251,154 @@ function updateCopyrightYear() {
 }
 
 updateCopyrightYear();
+
+// Portfolio functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Portfolio filter
+  const filterButtons = document.querySelectorAll('.portfolio-filter');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+
+        // Update active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter items
+        portfolioItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hidden');
+            item.style.animation = 'fadeIn 0.5s ease';
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // Portfolio slider
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const modal = document.getElementById('portfolioModal');
+  const modalImage = document.getElementById('portfolioImage');
+  const closeBtn = document.querySelector('.portfolio-close');
+  const prevBtn = document.querySelector('.portfolio-prev');
+  const nextBtn = document.querySelector('.portfolio-next');
+  const currentSlideEl = document.getElementById('currentSlide');
+  const totalSlidesEl = document.getElementById('totalSlides');
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  if (portfolioCards.length > 0 && modal) {
+    // Open modal when clicking a portfolio card
+    portfolioCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const portfolioItem = this.closest('.portfolio-item');
+        const galleryData = portfolioItem.getAttribute('data-gallery');
+
+        try {
+          currentGallery = JSON.parse(galleryData);
+          currentIndex = 0;
+          openModal();
+        } catch (error) {
+          console.error('Error parsing gallery data:', error);
+        }
+      });
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Open modal
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      updateSlide();
+    }
+
+    // Update slide
+    function updateSlide() {
+      if (currentGallery.length > 0) {
+        modalImage.src = currentGallery[currentIndex];
+        currentSlideEl.textContent = currentIndex + 1;
+        totalSlidesEl.textContent = currentGallery.length;
+      }
+    }
+
+    // Previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      updateSlide();
+    }
+
+    // Next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      updateSlide();
+    }
+
+    // Event listeners
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', prevSlide);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+    }
+
+    // Close on background click
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (modal.classList.contains('active')) {
+        if (e.key === 'Escape') {
+          closeModal();
+        } else if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+        }
+      }
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    modal.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    modal.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        nextSlide(); // Swipe left
+      }
+      if (touchEndX > touchStartX + 50) {
+        prevSlide(); // Swipe right
+      }
+    }
+  }
+});

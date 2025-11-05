@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rockback Media Portfolio - Explore our creative work across web design, branding, video production, and more.">
+  <title>Portfolio - Rockback Media</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <header class="fixed top-0 left-0 right-0 z-40 py-4 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="logo text-white">Rockback Media</a>
+      <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
+        <a href="index.html" class="text-white hover:text-[#00FF9D]">Home</a>
+        <a href="about.html" class="text-white hover:text-[#00FF9D]">About</a>
+        <a href="portfolio.html" class="text-white hover:text-[#00FF9D]">Portfolio</a>
+        <a href="projects/index.html" class="text-white hover:text-[#00FF9D]">Projects</a>
+        <a href="blog.html" class="text-white hover:text-[#00FF9D]">Blog</a>
+        <a href="contact.html" class="text-white hover:text-[#00FF9D]">Contact</a>
+      </nav>
+      <button class="hamburger md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu fixed top-0 right-0 w-full h-screen bg-black md:hidden pt-20 px-6">
+      <nav class="flex flex-col space-y-6" aria-label="Mobile navigation">
+        <a href="index.html" class="text-white text-2xl hover:text-[#00FF9D]">Home</a>
+        <a href="about.html" class="text-white text-2xl hover:text-[#00FF9D]">About</a>
+        <a href="portfolio.html" class="text-white text-2xl hover:text-[#00FF9D]">Portfolio</a>
+        <a href="projects/index.html" class="text-white text-2xl hover:text-[#00FF9D]">Projects</a>
+        <a href="blog.html" class="text-white text-2xl hover:text-[#00FF9D]">Blog</a>
+        <a href="contact.html" class="text-white text-2xl hover:text-[#00FF9D]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero-gradient min-h-[50vh] flex items-center justify-center text-center px-6 pt-20">
+      <div class="max-w-5xl mx-auto fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Portfolio</h1>
+        <p class="text-xl md:text-2xl" style="color: #777777;">
+          A showcase of our creative excellence
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 bg-black">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Filter buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in">
+          <button class="portfolio-filter active px-6 py-3 rounded-full border-2 border-[#00FF9D] text-white font-semibold transition-all hover:bg-[#00FF9D] hover:text-black" data-filter="all">
+            All Work
+          </button>
+          <button class="portfolio-filter px-6 py-3 rounded-full border-2 border-gray-700 text-white font-semibold transition-all hover:border-[#00FF9D] hover:text-[#00FF9D]" data-filter="web-design">
+            Web Design
+          </button>
+          <button class="portfolio-filter px-6 py-3 rounded-full border-2 border-gray-700 text-white font-semibold transition-all hover:border-[#00FF9D] hover:text-[#00FF9D]" data-filter="branding">
+            Branding
+          </button>
+          <button class="portfolio-filter px-6 py-3 rounded-full border-2 border-gray-700 text-white font-semibold transition-all hover:border-[#00FF9D] hover:text-[#00FF9D]" data-filter="video">
+            Video Production
+          </button>
+          <button class="portfolio-filter px-6 py-3 rounded-full border-2 border-gray-700 text-white font-semibold transition-all hover:border-[#00FF9D] hover:text-[#00FF9D]" data-filter="social-media">
+            Social Media
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Portfolio Item 1 - Web Design -->
+          <div class="portfolio-item fade-in" data-category="web-design" data-gallery='[
+            "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1600&q=80",
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600&q=80",
+            "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="TechNova Solutions website design" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">TechNova Solutions</h3>
+                <p class="text-lg mb-2" style="color: #00FF9D;">Web Design & Development</p>
+                <p class="text-base" style="color: #CCCCCC;">Modern B2B SaaS website with custom CMS integration and conversion-optimized design</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 - Branding -->
+          <div class="portfolio-item fade-in" data-category="branding" data-gallery='[
+            "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1600&q=80",
+            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=80",
+            "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80" alt="GreenLeaf Organics branding" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">GreenLeaf Organics</h3>
+                <p class="text-lg mb-2" style="color: #C3E8FF;">Brand Identity & Packaging</p>
+                <p class="text-base" style="color: #CCCCCC;">Complete brand identity for organic product line including logo, packaging, and marketing collateral</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 - Video Production -->
+          <div class="portfolio-item fade-in" data-category="video" data-gallery='[
+            "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600&q=80",
+            "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=80",
+            "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80" alt="Summit Realty video production" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Summit Realty Group</h3>
+                <p class="text-lg mb-2" style="color: #E9D5FF;">Cinematic Property Tours</p>
+                <p class="text-base" style="color: #CCCCCC;">High-end real estate videos with 4K drone footage and professional cinematography</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 4 - Social Media -->
+          <div class="portfolio-item fade-in" data-category="social-media" data-gallery='[
+            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1600&q=80",
+            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80",
+            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" alt="Velocity Fitness social media" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Velocity Fitness</h3>
+                <p class="text-lg mb-2" style="color: #FED7AA;">Social Media Campaign</p>
+                <p class="text-base" style="color: #CCCCCC;">Complete social media strategy with daily content creation growing followers from 2K to 45K</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 5 - Web Design -->
+          <div class="portfolio-item fade-in" data-category="web-design" data-gallery='[
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80",
+            "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1600&q=80",
+            "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="BlueWave Media website" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">BlueWave Media</h3>
+                <p class="text-lg mb-2" style="color: #00FF9D;">Corporate Website</p>
+                <p class="text-base" style="color: #CCCCCC;">Sleek media company website with integrated podcast player and video showcase</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 6 - Branding -->
+          <div class="portfolio-item fade-in" data-category="branding" data-gallery='[
+            "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&q=80",
+            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1600&q=80",
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Artisan Brew Co. branding" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Artisan Brew Co.</h3>
+                <p class="text-lg mb-2" style="color: #C3E8FF;">Coffee Brand Identity</p>
+                <p class="text-base" style="color: #CCCCCC;">Specialty coffee roaster branding with packaging design and retail materials</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 7 - Video Production -->
+          <div class="portfolio-item fade-in" data-category="video" data-gallery='[
+            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&q=80",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Corporate video production" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Apex Industries</h3>
+                <p class="text-lg mb-2" style="color: #E9D5FF;">Corporate Video Series</p>
+                <p class="text-base" style="color: #CCCCCC;">Six-part video series showcasing company culture, products, and customer testimonials</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 8 - Web Design -->
+          <div class="portfolio-item fade-in" data-category="web-design" data-gallery='[
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80",
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600&q=80",
+            "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1600&q=80"
+          ]'>
+            <div class="portfolio-card">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="E-commerce website design" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="text-3xl font-bold mb-3">Urban Threads</h3>
+                <p class="text-lg mb-2" style="color: #00FF9D;">E-commerce Platform</p>
+                <p class="text-base" style="color: #CCCCCC;">Custom Shopify store with advanced filtering, AR try-on, and seamless checkout experience</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="hero-gradient py-24 px-6">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Create Together</h2>
+        <p class="text-xl mb-8" style="color: #777777;">Ready to bring your vision to life?</p>
+        <a href="contact.html" class="btn-primary">Start Your Project</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-black border-t border-gray-800 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services/web-design.html">Web Design</a></li>
+            <li><a href="services/branding.html">Branding</a></li>
+            <li><a href="services/video-production.html">Video Production</a></li>
+            <li><a href="services/social-media.html">Social Media</a></li>
+            <li><a href="services/drone-filming.html">Drone Filming</a></li>
+            <li><a href="services/music-sound.html">Music & Sound</a></li>
+            <li><a href="services/ai-automation.html">AI Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Work</h3>
+          <ul class="space-y-2">
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="projects/index.html">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Connect</h3>
+          <ul class="space-y-2 mb-6">
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+          <h4 class="text-sm font-semibold mb-2 text-white">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-8 border-t border-gray-800">
+        <p class="text-sm" style="color: #777777;">
+          &copy; <span class="copyright-year">2025</span> Rockback Media. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Portfolio Slider Modal -->
+  <div id="portfolioModal" class="portfolio-modal">
+    <button class="portfolio-close" aria-label="Close portfolio">&times;</button>
+    <button class="portfolio-nav portfolio-prev" aria-label="Previous image">‹</button>
+    <button class="portfolio-nav portfolio-next" aria-label="Next image">›</button>
+    <div class="portfolio-slider">
+      <img id="portfolioImage" src="" alt="Portfolio image">
+    </div>
+    <div class="portfolio-counter">
+      <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

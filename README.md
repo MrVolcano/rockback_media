@@ -17,6 +17,7 @@ A modern, responsive static website for Rockback Media - a digital creative agen
 ### Main Pages
 - **Home** (`index.html`) - Hero section, services overview, client quotes, CTA
 - **About** (`about.html`) - Company story, values, team info
+- **Portfolio** (`portfolio.html`) - Artistic showcase with 2x2 grid, category filters, and full-screen image slider
 - **Contact** (`contact.html`) - Contact form with validation
 - **Blog** (`blog.html`) - Blog placeholder (coming soon)
 
@@ -111,6 +112,14 @@ rockback_media/
 - Hover effects with neon glow
 - Lightbox for project galleries
 - Client logo slider
+- **Portfolio slider with full-screen image viewer**
+  - Category filtering (All, Web Design, Branding, Video, Social Media)
+  - 2x2 grid layout on desktop (responsive on mobile/tablet)
+  - Hover overlay with project details
+  - Full-screen modal with left/right navigation
+  - Keyboard navigation (arrow keys, ESC to close)
+  - Touch swipe support for mobile
+  - Multiple images per portfolio item
 
 ### Responsive Design
 - Breakpoints:
